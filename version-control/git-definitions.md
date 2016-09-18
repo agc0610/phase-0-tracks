@@ -10,3 +10,4 @@ A branch is a separate but related workspace to a master code base. You would us
 A commit is adding your code changes to the repository for review. A good commit message clearly and succinctly states what you have done, typically in present command tense.
 * What is a merge conflict?
 Typically a merge means committing something with changes to a base commit against which a comparison is made to determine said changes (so only the merge has changed information). A merge conflict arises when there is ambiguity about what changes have been made because both files have changed information.
+*Long Live Github!
