@@ -11,3 +11,4 @@ A commit is adding your code changes to the repository for review. A good commit
 * What is a merge conflict?
 Typically a merge means committing something with changes to a base commit against which a comparison is made to determine said changes (so only the merge has changed information). A merge conflict arises when there is ambiguity about what changes have been made because both files have changed information.
 *Long Live Github!
+*experiment 9/20
