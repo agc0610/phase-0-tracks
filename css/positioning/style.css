@@ -1,0 +1,17 @@
+#hat img {
+position: relative;
+left: 40%;
+margin-bottom: -90px;
+z-index: 999;
+}
+
+#octopus img {
+position: absolute;
+left: 41%;
+}
+
+#glasses img {
+position: relative;
+left: 44%;
+margin-top: 100px;
+}
