@@ -12,3 +12,11 @@
 .accomplishments {
   font-size: .8em;
 }
+
+li:hover {
+  color: red;
+}
+
+#volunteer-experience h3 {
+  background-color: yellow;
+}
