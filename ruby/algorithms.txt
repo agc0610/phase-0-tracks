@@ -1,0 +1,12 @@
+Release 0
+enter the elevator bay
+find the set of two buttons that have an up arrow or down arrow
+press the one on top, with the up arrow
+wait for the ding sound
+Enter the elevator that opens after the ding
+scan the set of buttons that correspond to floors
+choose the 10th floor
+  -count the total number of buttons
+  -subtract B or G which are usually in addition to the first floor
+  -cycle through the rest of the buttons until the one for ten is reached
+  -Note: could be item 12 or 13 in the array if there are a B, G, and/or M
