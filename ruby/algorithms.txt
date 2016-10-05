@@ -1,12 +1,29 @@
 Release 0
-enter the elevator bay
-find the set of two buttons that have an up arrow or down arrow
-press the one on top, with the up arrow
-wait for the ding sound
+Enter the elevator bay
+Find the set of two buttons that have an up arrow or down arrow
+Press the one on top, with the up arrow
+Wait for the ding sound
 Enter the elevator that opens after the ding
-scan the set of buttons that correspond to floors
-choose the 10th floor
+Scan the set of buttons that correspond to floors
+Choose the 10th floor
   -count the total number of buttons
   -subtract B or G which are usually in addition to the first floor
   -cycle through the rest of the buttons until the one for ten is reached
-  -Note: could be item 12 or 13 in the array if there are a B, G, and/or M
+  -note: could be item 12 or 13 in the array if there are a B, G, and/or M
+
+
+Release 1: Putting on socks
+Open the correct dresser drawer with socks
+  -cycle through each drawer for n drawers until socks are matched
+Select any pair of socks
+While possessing the socks move towards a chair
+Sit down
+Unfold the socks
+Keep one sock in hand
+Put one sock on the floor
+Pick up the left leg and rest the ankle on the opposite thigh
+Use both hands to open the sock and slide it over the left foot
+Keep sliding until the toes are at the end of the sock in the toe space
+Unfold left leg and place foot on floor
+Repeat on the right side
+
