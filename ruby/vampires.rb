@@ -2,8 +2,8 @@
 name = ""
 age = 0
 birthyear = 0
-garlicbread = false
-insurance = false
+garlicbread = true
+insurance = true
 
 puts "What is your name?"
 name = gets.chomp
@@ -19,3 +19,22 @@ garlicbread = gets.chomp
 
 puts "Would you like to enroll in the company's health insurance?"
 insurance = gets.chomp
+
+
+agecorrect = age corresponds to birthyear
+agecorrect = true
+
+if agecorrect && garlicbread && insurance
+  puts "Probably not a vampire."
+
+
+if !agecorrect && !garlicbread || !insurance
+  puts "Probably a vampire."
+
+if !agecorrect && !garlicbread && !insurance
+  puts "Almost certainly a vampire."
+
+
+
+
+
