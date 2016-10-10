@@ -1,9 +1,4 @@
-# user input variables
-name = ""
-age = 0
-birthyear = 0
-garlicbread = false
-insurance = false
+# gather new employee data
 
 puts "What is your name?"
 name = gets.chomp
@@ -19,3 +14,4 @@ garlicbread = gets.chomp
 
 puts "Would you like to enroll in the company's health insurance?"
 insurance = gets.chomp
+
