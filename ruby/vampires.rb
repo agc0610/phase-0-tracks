@@ -28,6 +28,7 @@ while counter < num_employees
     allergy = gets.chomp
     allergies << allergy
     puts "Please enter another allergy. Type 'done' when finished"
+    break if allergy == "done"
   end
 
   if allergies.include?("sunshine")
