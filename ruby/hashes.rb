@@ -30,21 +30,24 @@ client_details = {}
 
 p client_details
 
-
 #   Give the user the opportunity to update a key (no need to loop, once is fine). After all, sometimes users make mistakes!
-NEED TO OPEN UP TO USER INPUT INSTEAD OF EXITING OUT. DOES SIMPLY HAVING MORE CODE STOP THIS?
 
-  puts "Any changes to make to the client's answers?"
-    get designers answer
-    store in variable to call in if/else loop
+  puts "Please review your answers. If you need to make a change, type the name of the field to change. If not, type 'none'."
+    make_change = gets.chomp.to_sym
 
-      if the designer says "none"
-        >>skip it
-      elsif the designer enters "decor_theme" (or some other key),
-        >>your program should ask for a new value and update the :decor_theme key.
+#       If the designer enters "decor_theme" (for example), your program should ask for a new value and update the :decor_theme key.
+    if
+      make_change != :none
+      puts "What is the change to make?"
+      update = gets.chomp
+      client_details[make_change] = update
 
+#      If the designer says "none", skip it
 
-#       (Hint: Strings have methods that will turn them into symbols, which would be quite handy here.) You can assume the user will correctly input a key that exists in your hash -- no need to handle user errors.
+      unless
+      make_change == :none
+      end
+  end
 
-#   Print the latest version of the hash, and exit the program.
-
+  #   Print the latest version of the hash, and exit the program.
+  p client_details
