@@ -15,3 +15,18 @@ end
 arr = [42, 89, 23, 1]
 #p search_array(arr, 1)
 p search_array(arr, 42)
+
+#release 1
+def fibonacci(value)
+  arr = [0, 1]
+  count = 0
+  while count < value - 2
+    tmp = arr[count] + arr[count + 1]
+    p tmp
+    arr << tmp
+    count += 1
+  end
+  return arr
+end
+
+p fibonacci(100)
