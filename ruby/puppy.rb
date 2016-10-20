@@ -16,3 +16,7 @@
 #   Bark
 #   Wriggle
 #   Tug
+
+class Puppy
+
+end
