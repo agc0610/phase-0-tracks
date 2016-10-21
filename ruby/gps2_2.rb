@@ -21,6 +21,7 @@ end
 
 create_a_list("carrots apples cereal pizza")
 
+
 # Method to add an item to a list
   # input: item name and optional quantity, grocery list
   # steps:
@@ -40,8 +41,11 @@ def add_an_item(item, value, grocery_list)
   p grocery_list
 end
 
-grocery_list = {"carrots"=>1, "apples"=>1, "cereal"=>1, "pizza"=>1}
-add_an_item("milk", "", grocery_list)
+grocery_list = create_a_list("lemonade tomatoes onions ice_cream")
+add_an_item("lemonade", "2", grocery_list)
+add_an_item("tomatoes", "3", grocery_list)
+add_an_item("onions", "1", grocery_list)
+add_an_item("ice_cream", "4", grocery_list)
 
 
 # Method to remove an item from the list
@@ -53,17 +57,17 @@ add_an_item("milk", "", grocery_list)
   # output: modified grocery list hash
 
 def remove_item(item, grocery_list)
-  item_exists = grocery_list.include?(item)
-  if item_exists
+  exists = grocery_list.include?(item)
+  if exists
     grocery_list.delete(item)
   else
     puts "Sorry, that item is not in the list."
-   end
+  end
   p grocery_list
 end
 
-grocery_list = {"carrots"=>1, "apples"=>1, "cereal"=>1, "pizza"=>1, "milk"=>2}
-remove_item("cheese", grocery_list)
+grocery_list
+remove_item("lemonade", grocery_list)
 
 # Method to update the quantity of an item
   # input: item name, quantity, grocery list
@@ -86,8 +90,8 @@ def update_quantity(item, value, grocery_list)
   p grocery_list
 end
 
-grocery_list = {"carrots"=>1, "apples"=>1, "cereal"=>1, "pizza"=>1, "milk"=>2}
-update_quantity("carrots", 3, grocery_list)
+grocery_list
+update_quantity("ice_cream", 1, grocery_list)
 
 # Method to print a list and make it look pretty
   # input: grocery list
@@ -98,14 +102,14 @@ update_quantity("carrots", 3, grocery_list)
   #   write a puts statement with more lines or something to delinate the end
   # output: the formatted grocery list
 
-  def print_grocery_list(grocery_list)
+def print_grocery_list(grocery_list)
     puts "Your grocery list"
     puts "_________________"
     grocery_list.each{|item, value| puts "#{item}: #{value}"}
     puts "_________________"
-  end
+end
 
-grocery_list = {"carrots"=>3, "apples"=>1, "cereal"=>1, "pizza"=>1, "milk"=>2}
+grocery_list
 print_grocery_list(grocery_list)
 
 
