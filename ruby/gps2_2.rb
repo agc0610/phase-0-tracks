@@ -19,9 +19,6 @@ def create_a_list (item_list)
   p grocery_list
 end
 
-create_a_list("carrots apples cereal pizza")
-
-
 # Method to add an item to a list
   # input: item name and optional quantity, grocery list
   # steps:
@@ -42,6 +39,7 @@ def add_an_item(item, value, grocery_list)
 end
 
 grocery_list = create_a_list("lemonade tomatoes onions ice_cream")
+#10/21: I know this is a prime spot to refactor, but after a couple hours of tooling with the code I am not getting anywhere. The article on Ruby and method arguments from Code, love & boards was helpful, but I am still murky on how to translate the examples here. (I tried the hash arguments one.) I could just use a little more nudging on how the variables translate across--the point of all this, I know!-- because I do feel clear on what everything I wrote does and why add_an_item on repeat is not a good idea. I also can see that setting the variable grocery_list equal to the create a list method up front made it easy to factor out the naming of the hash each time.
 add_an_item("lemonade", "2", grocery_list)
 add_an_item("tomatoes", "3", grocery_list)
 add_an_item("onions", "1", grocery_list)
