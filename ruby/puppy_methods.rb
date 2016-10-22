@@ -70,3 +70,15 @@ end
 #Kitty.new.take_a_bath("scree")
 #Kitty.new.play_with_toy("potato")
 #Kitty.new.cat_happiness_rating(20)
+
+count = 0
+finish = 49
+kitties = []
+while count <= finish do
+  new_kitty = Kitty.new
+  puts "new instance made!"
+  kitties << new_kitty
+  count +=1
+end
+
+p kitties
