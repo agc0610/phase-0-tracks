@@ -82,3 +82,7 @@ while count <= finish do
 end
 
 p kitties
+
+kitties.each {|new_kitty| new_kitty.take_a_bath("wet")}
+kitties.each {|new_kitty| new_kitty.play_with_toy("potato")}
+kitties.each{|new_kitty| new_kitty.cat_happiness_rating(48)}
