@@ -16,12 +16,7 @@ class Santa
   end
 
   def about
-    puts "Santa 1 is #{@gender} and #{@ethnicity}, which is awesome!"
-  end
-
-  #setter method to allow gender to be reassigned from outside
-  def gender=(new_gender)
-    @gender = new_gender
+    puts "Santa 1 is #{@gender} and #{@ethnicity}, which is awesome! Santa is #{@age} years old."
   end
 
   #getter methods
@@ -33,6 +28,13 @@ class Santa
     @ethnicity
   end
 
+
+  #setter method to allow gender to be reassigned from outside
+  def gender=(new_gender)
+    @gender = new_gender
+  end
+
+  #other setter methods
   def celebrate_birthday(age)
     @age = age + 1
   end
@@ -47,10 +49,12 @@ class Santa
 
 end
 
-# santa = Santa.new("female", "Hispanic")
-# # santa.speak
-# # santa.eat_milk_and_cookies("chocolate chip")
-# santa.about
+santa = Santa.new("female", "Hispanic")
+santa.about
+santa.gender = "cis-male"
+santa.age
+santa.celebrate_birthday(0)
+santa.about
 
 # santa = Santa.new("cis-male", "Russian")
 # santa.about
@@ -58,11 +62,11 @@ end
 # santa = Santa.new("gender queer", "Amazonian")
 # santa.about
 
-santa_group = []
-santa_group << Santa.new("female", "Hispanic")
-santa_group << Santa.new("cis-male", "Russian")
-santa_group << Santa.new("gender queer", "Amazonian")
+# santa_group = []
+# santa_group << Santa.new("female", "Hispanic")
+# santa_group << Santa.new("cis-male", "Russian")
+# santa_group << Santa.new("gender queer", "Amazonian")
 
-p santa_group
+# p santa_group
 
 
