@@ -1,4 +1,7 @@
 class Santa
+  attr_reader :age, :ethnicity
+  attr_accessor :gender
+
   def initialize(gender, ethnicity)
     print "Initializing Santa instance..."
     @gender = gender
@@ -17,21 +20,6 @@ class Santa
 
   def about
     puts "Santa 1 is #{@gender} and #{@ethnicity}, which is awesome! Santa is #{@age} years old."
-  end
-
-  #getter methods
-  def age
-    @age
-  end
-
-  def ethnicity
-    @ethnicity
-  end
-
-
-  #setter method to allow gender to be reassigned from outside
-  def gender=(new_gender)
-    @gender = new_gender
   end
 
   #other setter methods
