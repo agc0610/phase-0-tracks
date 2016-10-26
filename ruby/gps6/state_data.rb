@@ -1,6 +1,9 @@
 #population density is number of people per square mile as of 2012
 #this data is updated every year with estimates from a 10 year census
 
+#In this case, the choice to keep the state names as strings could be because we know that they will reappear as strings later for UI related reasons.
+
+#The type of variable that this is, is called a constant. The all caps gives it away. It has the same scope as a global variable, but is meant to keep a constant value. When you see a constant, do not change the data, although Ruby won't stop you.
 
 STATE_DATA = {
   "Alabama" => {population_density: 94.65, population: 4822023},
