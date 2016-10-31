@@ -1,17 +1,12 @@
 // Release 0
 // in the driver code get the array
 // pass that into the function call
-// go through each item in the array (for loop so it stops at end of array?)
-// if for loop what do we need
-// set up a variable for default string length of 0
+// set up a counter to start at zero for a condition to check against
 // introduce an empty variable to store the return value we are looking for
-// the first time through the loop, compare the array item to the default string length (0)
-// if the current array item is greater than 0, reassign the string length variable to that length
-// in the next time through the loop, the current array item is compared to the previous item's length
-// if it is longer, the process repeats because it is greater than the new value (if it is shorter, no reassigning happens and it continues)
-// the last value to cause an update at the end of the loop is the longest
+// go through each item in the array (for loop so it stops at end of array?)
+// FINISH IN algos.js
 
-function longestString() {
+function longestString(arr) {
   var strlength = 0;
   var longest = "";
   for(var i=0; i < arr.length; i++){
@@ -20,13 +15,12 @@ function longestString() {
           longest = arr[i];
       }
   }
-  console.log(longest);
+  return longest;
 }
 
 // var arr = ['robots make noises', 'robots', 'they make beep boop noises all day'];
-var arr = ['hello', 'what is for dinner', 'I want to eat right this minute']
-longestString(arr);
-
+// var arr = ['hello', 'what is for dinner', 'I want to eat right this minute']
+// longestString(arr);
 
 // Release 1
 // get the first and second object
@@ -62,7 +56,6 @@ var object2 = {
 
 findPairs(object1, object2);
 
-
 // Release 2
 // get an integer (passed in as an argument)
 // set up an empty array to store upcoming strings
@@ -95,12 +88,17 @@ function wordGenerator(numberOfWords) {
     words.push(randomWordMaker(lengthOfWord));
     numberOfWords--;
   }
-  console.log(words);
+  return words;
 }
 
-var numberOfWords = 3
-wordGenerator(numberOfWords)
+// var numberOfWords = 3
+// wordGenerator(numberOfWords)
 
+// Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your "longest word" function, and prints the result.
+var words = wordGenerator(10);
+console.log(words);
+var longestWord = longestString(words);
+console.log(longestWord);
 
 
 
