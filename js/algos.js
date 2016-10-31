@@ -30,10 +30,37 @@ longestString(arr);
 
 // Release 1
 // get the first and second object
-// is there something similar to Ruby .empty? to check for something present at an intersection? Can this work for objects as well as arrays?
-// Use that behavior to check if there is a key/value pair in common
-// else (letter_array & consonant_bank).empty? == false
-//       p letter_array & consonant_bank
+// pass to function
+// use object.keys to split both into arrays of their respective keys
+// RESEARCH comparing two arrays
+// if there is a key match, nested if/else to then see if the matching key has the same value
+// RESEARCH try using object.values (experimental, documentation says) to then compare a key's value?
+// if there is one, return true
+
+function findPairs() {
+  for (var key1 in object1) {
+    for (var key2 in object2) {
+      if (key1 === key2 && object1[key1] === object2[key2]) {
+        return true;
+      }
+    }
+  } return false;
+}
+
+
+var object1 = {
+  name: "Steven",
+  // last_name:
+  age: 54
+  // your_age:
+};
+
+var object2 = {
+  name: "Tamir",
+  age: 54
+};
+
+findPairs(object1, object2);
 
 
 // Release 2
