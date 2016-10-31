@@ -72,6 +72,35 @@ findPairs(object1, object2);
 // the length of the word should be random
 // the letters in the word can be random
 
+function randomNumber(min, max) {
+  // Math.floor removes the decimals so that this can run in the word maker function correctly
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+function randomWordMaker(lengthOfWord) {
+  letter_bank = "abcdefghijklmnopqrstuvwxyz";
+  word = "";
+  while (lengthOfWord >= 0) {
+    var index = randomNumber(0, 26);
+    word += letter_bank[index];
+    lengthOfWord--;
+  }
+  return word;
+}
+
+function wordGenerator(numberOfWords) {
+  var words = [];
+  while (numberOfWords > 0) {
+    var lengthOfWord = randomNumber(1, 10);
+    words.push(randomWordMaker(lengthOfWord));
+    numberOfWords--;
+  }
+  console.log(words);
+}
+
+var numberOfWords = 3
+wordGenerator(numberOfWords)
+
 
 
 
