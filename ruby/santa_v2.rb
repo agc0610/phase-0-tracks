@@ -16,14 +16,40 @@ class Santa
     puts "That was a good #{cookie_type} cookie!"
   end
 
+  def age
+    @age
+  end
+
+  def ethnicity
+    @ethnicity
+  end
+
+  def gender=(new_gender)
+    @gender = new_gender
+  end
+
+  def celebrate_birthday(age)
+    @age = age + 1
+  end
+
+  def get_mad_at(reindeer_name)
+    if @reindeer_ranking.include?(reindeer_name)
+      @reindeer_ranking.delete_at(@reindeer_ranking.index(reindeer_name))
+      @reindeer_ranking << reindeer_name
+    else
+      puts "No naughty reindeer today!"
+    end
+    p @reindeer_ranking
+  end
+
 end
 
-# Release 0
+# Release 0 driver code
 # santa = Santa.new
 # santa.speak
 # santa.eat_milk_and_cookies("chocolate chip")
 
-# Release 1
+# Release 1 driver code
 santa_group = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Amazonian", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
@@ -33,3 +59,10 @@ while index < example_ethnicities.length do
   index +=1
   p santa_group
 end
+
+# Release 2 driver code
+santa = Santa.new("female", "Hispanic")
+p santa
+p santa.gender = "cis-male"
+p santa
+p santa.celebrate_birthday(53)
