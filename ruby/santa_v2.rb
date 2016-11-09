@@ -1,10 +1,13 @@
 class Santa
+  attr_reader :ethnicity
+  attr_accessor :gender, :age, :reindeer_name
 
   def initialize(gender, ethnicity)
     puts "Initializing Santa instance..."
     @gender = gender
     @ethnicity = ethnicity
-    @reinder_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+    @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+    @reindeer_name = reindeer_name
     @age = 0
   end
 
@@ -14,18 +17,6 @@ class Santa
 
   def eat_milk_and_cookies(cookie_type)
     puts "That was a good #{cookie_type} cookie!"
-  end
-
-  def age
-    @age
-  end
-
-  def ethnicity
-    @ethnicity
-  end
-
-  def gender=(new_gender)
-    @gender = new_gender
   end
 
   def celebrate_birthday(age)
@@ -50,19 +41,20 @@ end
 # santa.eat_milk_and_cookies("chocolate chip")
 
 # Release 1 driver code
-santa_group = []
-example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-example_ethnicities = ["black", "Amazonian", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-index = 0
-while index < example_ethnicities.length do
-  santa_group << Santa.new(example_genders[index], example_ethnicities[index])
-  index +=1
-  p santa_group
-end
+# santa_group = []
+# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+# example_ethnicities = ["black", "Amazonian", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+# index = 0
+# while index < example_ethnicities.length do
+#   santa_group << Santa.new(example_genders[index], example_ethnicities[index])
+#   index +=1
+#   p santa_group
+# end
 
 # Release 2 driver code
-santa = Santa.new("female", "Hispanic")
-p santa
-p santa.gender = "cis-male"
-p santa
-p santa.celebrate_birthday(53)
+# santa = Santa.new("female", "Hispanic")
+# p santa
+# p santa.gender = "cis-male"
+# p santa
+# p santa.celebrate_birthday(53)
+santa.get_mad_at("Rudolph")
