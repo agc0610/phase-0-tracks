@@ -51,10 +51,30 @@ end
 #   p santa_group
 # end
 
-# Release 2 driver code
+# Release 2, 3 driver code
 # santa = Santa.new("female", "Hispanic")
 # p santa
 # p santa.gender = "cis-male"
 # p santa
 # p santa.celebrate_birthday(53)
-santa.get_mad_at("Rudolph")
+# santa.get_mad_at("Rudolph")
+
+santas = []
+
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+  random_gender = example_genders.sample
+  random_ethnicity = example_ethnicities.sample
+    santa = Santa.new(random_gender, random_ethnicity)
+
+def get_random_age
+  prng = Random.new
+  random_age = prng.rand(140)
+  return random_age
+end
+  santa.age = get_random_age()
+  santas << santa
+
+  p santas
+
