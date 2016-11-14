@@ -1,5 +1,4 @@
 class WordGame
-  #what are the variables we want to be readable and/or writable outside the class?
 
   #what are the behaviors on start up?
   def initialize
@@ -40,28 +39,27 @@ class WordGame
 
   def did_user_win
     if @letters.index("_") == nil
-      puts "Congrats, you won!"
+      message = "Congrats, you won!"
     else
-      puts "Sorry, you lost."
+      message = "Sorry, you lost."
     end
   end
 end
 
 
-#user interface
-puts "Welcome to the Word Guessing Game!"
-game = WordGame.new
+# #user interface
+# puts "Welcome to the Word Guessing Game!"
+# game = WordGame.new
 
-puts "Player one, please enter a word."
-word = gets.chomp
-game.set_word(word)
+# puts "Player one, please enter a word."
+# word = gets.chomp
+# game.set_word(word)
 
-while game.end_game() do
-  puts "Player two, please guess a letter."
-  letter = gets.chomp
-  game.guess_letter_in_word(letter)
-end
+# while game.end_game() do
+#   puts "Player two, please guess a letter."
+#   letter = gets.chomp
+#   game.guess_letter_in_word(letter)
+# end
 
-game.did_user_win()
-puts "Game Over!"
-
+# game.did_user_win()
+# puts "Game Over!"
