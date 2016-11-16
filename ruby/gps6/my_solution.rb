@@ -21,7 +21,7 @@ class VirusPredictor
     predicted_deaths
     speed_of_spread
   end
-  #private methods can be called inside the class, but not outside. Can use it to prevent users on the outside from changing internal methods. Sets a boundary for what is internal use only and users shouldn't see in the interface until you call it.
+  #private methods can be called inside the class, but not outside. Can use it to prevent users on the outside from changing internal methods. Sets a boundary for what is internal use only and users shouldn't see in the interface wth other classes until you call it.
   private
   #this method calculates predicted deaths based on pop density conditionals and outputs results
   def predicted_deaths
