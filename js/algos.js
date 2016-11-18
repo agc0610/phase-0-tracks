@@ -25,11 +25,13 @@ function longestString(arr) {
 // Release 1
 // get the first and second object
 // pass to function
-// use object.keys to split both into arrays of their respective keys
-// RESEARCH comparing two arrays
-// if there is a key match, nested if/else to then see if the matching key has the same value
-// RESEARCH try using object.values (experimental, documentation says) to then compare a key's value?
+// loop through first object's keys
+// inside that loop check second object's keys against first
+// check if there is a match between keys as well as values
+// conditionals?
+// RESEARCH try using object.values (experimental, documentation says) to then compare a key's value? can't really do that it turns out right now
 // if there is one, return true
+// otherwise return false
 
 function findPairs() {
   for (var key1 in object1) {
@@ -57,19 +59,21 @@ var object2 = {
 findPairs(object1, object2);
 
 // Release 2
-// get an integer (passed in as an argument)
-// set up an empty array to store upcoming strings
-// set up a letter bank array to use to construct the random words
-// use Math.random to generate the varying length
-// we know from the integer how many words we will construct
-// the length of the word should be random
-// the letters in the word can be random
 
+// use Math.random to generate the varying lengths for the word and the letters in the word
+// Math.floor removes the decimals so that this can run in the word maker function correctly
 function randomNumber(min, max) {
-  // Math.floor removes the decimals so that this can run in the word maker function correctly
   return Math.floor(Math.random() * (max - min) + min);
 }
 
+// Set up letterbank to draw from
+// set up empty space for a word's letters to go
+// use length of word from wordgenerator as passed in parameter to this loop
+  // as long as length of word is greater than zero
+  // use randomnumber to pick a random letter from the letter_bank
+  // add that to the word
+  // decrease length of word to get to zero eventually
+// return the word, which becomes the value of randomWordMaker passed into the array
 function randomWordMaker(lengthOfWord) {
   letter_bank = "abcdefghijklmnopqrstuvwxyz";
   word = "";
@@ -81,6 +85,14 @@ function randomWordMaker(lengthOfWord) {
   return word;
 }
 
+// start with 3 words
+// set up empty array to return the words per instructions
+// iterate that many times
+// while greater than 0
+  // length of word should be between 1 and 10 letters
+  // use randomWordMaker and the length of word that is randomly generated to make a word and put it in the array
+  // decrease the number of words length to dial down the iterating
+// return the array
 function wordGenerator(numberOfWords) {
   var words = [];
   while (numberOfWords > 0) {
@@ -91,9 +103,11 @@ function wordGenerator(numberOfWords) {
   return words;
 }
 
+// original driver code
 // var numberOfWords = 3
 // wordGenerator(numberOfWords)
 
+// Release 2 driver code
 // Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your "longest word" function, and prints the result.
 var words = wordGenerator(10);
 console.log(words);
