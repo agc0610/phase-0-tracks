@@ -39,3 +39,30 @@ sqlite> SELECT * FROM patients
 1|Janice|Johnson|19500101|1234567890|1
 2|Annette|Jones|19710304|1324657809|1
 4|Daniel|Ackers|19460212|413765498|2
+
+
+Release 3 research on types of joins and practice
+
+1. inner join
+sqlite> SELECT pt_first_name, pt_last_name, clinic_location FROM patients INNER JOIN clinics ON patients.clinic_id = clinics.id;
+Janice|Johnson|San Francisco
+Annette|Jones|San Francisco
+Daniel|Ackers|Oakland
+
+2. left outer join
+(NOTE: I think I'm missing something about the value of this join... why not just select the info from one table without worrying about the other table? Maybe it's because these tables are still simple...I thought about writing in something else after the ON but the foreign key is the point, so I suppose that has to be all we use.
+Also, apparently sqlite does not have access to all sql commands--why wouldn't we just learn sql in order to be able to practice all of these?)
+
+sqlite> SELECT clinic_location, clinic_phone FROM clinics LEFT OUTER JOIN patients ON patients.clinic_id = clinics.id;
+San Francisco|4158774500
+San Francisco|4158774500
+Oakland|5109874700
+
+3. natural join
+sqlite> SELECT * FROM patients NATURAL JOIN clinics;
+1|Janice|Johnson|19500101|1234567890|1|San Francisco|4158774500|4158774501
+2|Annette|Jones|19710304|1324657809|1|Oakland|5109874700|5109874759
+
+sqlite> SELECT * FROM clinics NATURAL JOIN patients;
+1|San Francisco|4158774500|4158774501|Janice|Johnson|19500101|1234567890|1
+2|Oakland|5109874700|5109874759|Annette|Jones|19710304|1324657809|1
