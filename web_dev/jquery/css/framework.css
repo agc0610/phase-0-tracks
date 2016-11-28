@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* CSS Document */
+/* reset styles */
+/* html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+ padding: 0;
+ margin: 0;
+ font-size: 100%;
+ font-weight: normal;
+}
+/* end reset styles */
+
+/* general styling */
+#container {
+  width: 99%;
+  margin: 5px;
+}
+
+h1, h2, p {
+  font-family: Verdana, Arial;
+}
+
+/* food choices side of container styling */
+#food_choices {
+  float: left;
+}
+
+#food_choices img {
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* image hover styling to change color along with opacity*/
+.red span {
+  background-color: red;
+  display: inline-block;
+}
+
+.green span {
+  background-color: green;
+  display: inline-block;
+}
+
+.purple span {
+  background-color: purple;
+  display: inline-block;
+}
+
+.orange span {
+  background-color: orange;
+  display: inline-block;
+}
+
+/* plate side of container styling */
+#my_plate {
+  float: right;
+  padding-bottom: 10px;
+}
+
+#plate_image {
+  background-image: url('../images/large_myplate-flat-plate.jpg');
+  background-repeat: no-repeat;
+  height: 620px;
+  width: 760px;
+}
+
+#plate_surface {
+  z-index: 1;
+  overflow: hidden;
+  height: 675px;
+  width: 800px;
+}
+
+/* resize cloned images once on the plate surface */
+.inside-plate_surface {
+  width: 150px;
+  height: 150px;
+}
+
+/* button style */
+input[type=button] {
+  width: 200px;
+  height: 50px;
+  background-color: gray;
+  font-size: 16px;
+}

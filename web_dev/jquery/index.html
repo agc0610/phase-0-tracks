@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Building a Balanced Meal</title>
+  <link rel="stylesheet" type="text/css" href="css/framework.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+</head>
+
+<body>
+<div id="container">
+
+  <h1>What Does a Balanced Meal Look Like?</h1>
+    <p>Teach your child about putting together a balanced meal! Help them choose one food from each category, then click and drag it to its matching color section of the plate. As you build your plate you will learn a little about the foods. <br><br>
+    To delete a food from your plate, double-click on it. To clear your plate, click the "start over" button.</p>
+
+
+  <div id="food_choices">
+
+    <h2>Choose a fruit</h2>
+    <div class="red">
+    <span><img class="fruits" id="strawberries" src="images/strawberries_4.jpg" alt="Yum! Strawberries are a good source of vitamin C, which helps you stay healthy. Do you have a vegetable, grain and protein?"></span>
+    <span><img class="fruits" id="banana" src="images/bananas.gif" alt="Delicious! Bananas have fiber, which helps you feel full. Do you have a vegetable, grain and protein?"></span>
+    <span><img class="fruits" id="orange" src="images/orange.jpg" alt="Good choice! Oranges are a yummy way to get vitamin C, which helps protect you from getting sick. Do you have a vegetable, grain and protein?"></span>
+    </div>
+
+    <h2>Choose a vegetable</h2>
+    <div class="green">
+    <span><img class="vegetables" id="carrots" src="images/carrots.jpg" alt="Great choice! Carrots have vitamin A, which helps protect your eyes. Do you have a fruit, grain and protein?"></span>
+    <span><img class="vegetables" id="broccoli" src="images/broccoli.jpg" alt="That's a good one! Broccoli has fiber, which helps you feel full. It's tasty with pasta. Do you have a fruit, grain and protein?"></span>
+    <span><img class="vegetables" id="green_beans" src="images/green_beans.jpg" alt="Yum! Green beans have vitamins to protect your organs. They are delicious with rice! Do you have a fruit, grain and protein?"></span>
+    </div>
+
+    <h2>Choose a protein</h2>
+    <div class="purple">
+    <span><img class="proteins" id="chicken_breast" src="images/chicken_breast.jpg" alt="Yum! Chicken has protein, which you need for healthy muscles! Do you have a fruit, vegetable and grain?"></span>
+    <span><img class="proteins" id="salmon_portion" src="images/salmon_portion.jpg" alt="Good choice! Salmon has healthy fats, which protect your brain and heart. Do you have a fruit, vegetable and grain?"></span>
+    <span><img class="proteins" id="black_beans" src="images/black_beans.jpg" alt="So tasty! Black beans have fiber, which helps you feel full. They also have protein to help your muscles. Do you have a fruit, vegetable and grain?"></span>
+    </div>
+
+    <h2>Choose a grain</h2>
+    <div class="orange">
+    <span><img class="grains" id="corn_tortilla" src="images/corn_tortilla.jpg" alt="Corn tortillas are so good hot off the griddle! They are lower in calories than other bread options. Do you have a fruit, vegetable and protein?"></span>
+    <span><img class="grains" id="macaroni_pasta" src="images/Draining_Macaroni21.jpg" alt="Delicious! Pasta tastes delicious with vegetables and certain kinds provide fiber to help you feel full. Do you have a fruit, vegetable and protein?"></span>
+    <span><img class="grains" id="rice" src="images/rice.jpg" alt="Excellent choice! Rice has protein, which helps your muscles. It also has B vitamins, which protect your organs, and fiber to help you feel full. Do you have a fruit, vegetable and protein?"></span>
+    </div>
+
+  </div>
+
+  <div id="my_plate">
+
+    <h2>Build your plate!</h2>
+    <div id="plate_image">
+      <div id="plate_surface">
+      </div>
+    </div>
+    <br>
+  <input type="button" id="refresh-btn" value="start over">
+  </div>
+
+</div>
+
+<script src="js/plate-builder.js"></script>
+
+</body>
+</html>
