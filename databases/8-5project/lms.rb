@@ -85,15 +85,19 @@
 
   #   add_learner(database, name[0], name[1], 'Recruiting', 'Recruiter', 20140725)
 
-  # # feedback to user
+  # # # feedback to user
   # puts "Thank you for adding a new learner! The updated roster is:"
   # learners = database.execute("SELECT first_name, last_name FROM learners")
   # p learners
 
-  # # B. update that learner's information with the course information (MANIPULATE)
+  # B. update that learner's information with the course information (MANIPULATE)
 
   # def update_learner(database, date_of_hire, courses_taking)
   #   database.execute("UPDATE learners SET courses_taking=? WHERE date_of_hire=?", [courses_taking, date_of_hire])
+  # end
+
+  # def update_enrolled(database, learner_id, course_id)
+  #   database.execute("INSERT INTO enrolled (learner_id, course_id) VALUES (#{learner_id}, 42)")
   # end
 
   # puts "Please provide the date of hire for the batch of employees you need to enroll (YYYYMMDD), and the course name, separated by a comma."
@@ -112,8 +116,9 @@
 
   # C. see who is enrolled in which courses (RETRIEVE)
 
+  # I think I'm getting closer to why this won't show up--in 8.4 we had to go into the first two tables and insert foreign keys that indicated the relationship to the in-between table so that it had access to the information we wanted to display. Since we were not worrying about an interface, it was relatively straightforward to run a SQL command and update a row. In part III.A I'm getting stuck on having to take words in strings from a user to store the information, and then translate that behind the scenes into a simultaneous update of the learners and courses table with integers for the enrolled table to read. I tried to diagnose the mechanism by hard-coding a 42 to force an appearance of anything with Orientation (which has id 42) and pick one learner (there should be someone with, say, 27) to see if it would return them being enrolled in Orientation, but no luck. I'm turning in what I have so far, with the intent to keep working on untangling this. I need to re-consider the steps and probably break them down further.
   def course_roster(database, course_title)
-    database.execute("SELECT learners.first_name, learners.last_name, learners.courses_taking, courses.title FROM learners, courses, enrolled WHERE enrolled.learner_id = learners.id AND enrolled.course_id = courses.id")
+    database.execute("SELECT learners.first_name, learners.last_name, learners.courses_taking, courses.title FROM learners, courses, enrolled WHERE enrolled.learner_id = learners.id=27 AND courses.id=42")
   end
 
   puts "Please provide a course name to see who is enrolled."
@@ -121,7 +126,12 @@
 
   p course_roster(database, course_title)
 
-  POSSIBLE NOTHING IS PRINTING BECAUSE LEARNERS.COURSESTAKING DOESNT KNOW THAT THE STRING ORIENTATION CORRESPONDS TO COURSEID WHATEVER THE COURSEID IS IN COURSES. REVIEW HOW WE SET THINGS UP IN 8.4
+
+
+
+  # learners.each do |learner|
+  #   update_enrolled(database, "#{learner[0]}", 42 )
+  # end
 
 # APPENDIX: PRACTICE CODE
 
