@@ -47,9 +47,9 @@ end
 
 # Release 0
 # 1. Write a /contact route that displays an address
-get '/contact' do
-  address = ""
-end
+# get '/contact' do
+#   address = "#{params[:building_number]}"
+# end
 
 # 2. Write a /great_job route
 get '/great_job' do
@@ -59,7 +59,8 @@ end
 # 3. Write a route that uses route parameters to add two numbers and respond with the result
 
 get '/total/:num1/:num2' do
-
+  total = params[:num1].to_i + params[:num2].to_i
+  total = total.to_s
 end
 
 # 4. Bonus: Write a route that allows the user to search the DB in some way
