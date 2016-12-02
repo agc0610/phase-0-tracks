@@ -44,3 +44,22 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+# Release 0
+# 1. Write a /contact route that displays an address
+get '/contact' do
+  address = ""
+end
+
+# 2. Write a /great_job route
+get '/great_job' do
+  "Great job, #{params[:person]}!"
+end
+
+# 3. Write a route that uses route parameters to add two numbers and respond with the result
+
+get '/total/:num1/:num2' do
+
+end
+
+# 4. Bonus: Write a route that allows the user to search the DB in some way
