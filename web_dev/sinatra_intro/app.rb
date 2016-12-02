@@ -66,4 +66,3 @@ get '/total/:num1/:num2' do
   total = total.to_s
 end
 
-# 4. Bonus: Write a route that allows the user to search the DB in some way
