@@ -1,3 +1,4 @@
+# copy of pair work with Dharini M. 12/1/16
 # require gems
 require 'sinatra'
 require 'sqlite3'
@@ -17,6 +18,20 @@ get '/students/new' do
   erb :new_student
 end
 
+get '/students/details/youth' do
+  @students = db.execute("SELECT * FROM students where age>(?)",[20])
+  erb :details
+end
+get '/students/campus' do
+  @campus_creation = db.execute("CREATE TABLE IF NOT EXISTS campuses(id INTEGER PRIMARY KEY, campus_name varchar(255))")
+  erb :campus
+end
+
+post '/campus' do
+  db.execute("INSERT INTO campuses (campus_name) VALUES (?)",[params['campus_name']])
+  campus_list = db.execute("select * from campuses")
+  campus_list.to_s
+end
 # create new students via
 # a form
 post '/students' do

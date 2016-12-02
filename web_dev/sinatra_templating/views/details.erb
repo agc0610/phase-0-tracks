@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Details page</title>
+</head>
+<body>
+    <h3>Students Details: Age is nothing but a number</h3>
+    <% @students.each do |student| %>
+    <%= "Name: #{student['name']} and Age: #{student['age']}" %><br>
+    <%end%>
+</body>
+</html>
+Contact GitHub API Training Shop Blog About
