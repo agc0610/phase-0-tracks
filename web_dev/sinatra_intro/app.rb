@@ -47,9 +47,12 @@ end
 
 # Release 0
 # 1. Write a /contact route that displays an address
-# get '/contact' do
-#   address = "#{params[:building_number]}"
-# end
+get '/contact/:building_number/:street_name/:city/:state/:zip' do
+  building_number = "#{params[:building_number]}"
+  street_name = "#{params[:street_name]}"
+  city_state_zip = "#{params[:city]}, #{params[:state]}, #{params[:zip]}"
+  "The address is #{building_number} #{street_name}, in #{city_state_zip}."
+end
 
 # 2. Write a /great_job route
 get '/great_job' do
